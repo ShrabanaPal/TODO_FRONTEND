@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgba(226, 198, 255, 0.607);
+    background-image: url('./assets/background_todo.jpg');
+    background-size: cover; 
+    background-repeat: repeat;
+    background-position: center center;
+    background-color: black;
+    height: 80vh;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+nav{
+    background-color: rgb(173, 84, 255);
+    color: aliceblue;
+    width: 99vw;
+    display: flex;
+    height: 30px;
+    text-align: center;
+    padding: 8px;
+    justify-content: space-between;
+}
+
+ul{
+      display: flex;
+      gap: 8px;
+      list-style-type: none;
+
+}
+
+li{
+    padding: 8px;
+    color: black;
+    list-style-type: none;
+    text-decoration: none;   
+
+}
+
+li:hover{
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  transition-duration: 500ms;
+  list-style-type: none;
+}
+
+nav ul li NavLink {
+  text-decoration: none;
+  transition: all ;
+  list-style-type: none;
+}
+
+.logo{
+  color: rgba(60, 55, 55, 0.823);
+  padding: 6px;
+  font-size: 16px;
+}
+
+.container{
+    width: 51%;
+    height: 70vh;
+    margin: 40px auto;
+    padding: 50px 20px;
+    align-items: center;
+    border: 2px solid rgb(213, 168, 255);
+    box-shadow: 0 0 25px 8px rgba(128, 0, 128, 0.5); 
+    border-radius: 5px;
+    position: relative;
+    background-color: rgb(213, 168, 255);
+    flex-direction: column;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none; /* Firefox */
+     -ms-overflow-style: none;  
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.todo{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.314);
+    border-radius: 5px;
+    background-color: #f2e4ffcc; 
+}
+
+.todo input{
+    margin-left:1%;
+    margin-top: 1%;
+    border-radius: 5px;
+    box-shadow: 0 0px 0px rgba(174, 0, 255, 0.434);
+    outline: none;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn{
+    padding: 3px 5px;
+    background-color: blueviolet;
+    color: aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.314);
+    box-shadow: 0 4px 6px rgba(94, 94, 94, 0);
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    transition-duration: 500ms;
+    height: 35px;
+    
+}
+
+.btn:hover{
+    background-color: rgb(172, 51, 243);
+    color: rgba(44, 43, 43, 0.849);
+    transition: all 0.3s ease-in-out;
+    transition-duration: 500ms;
+    transform: scale(1.01) translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0); 
+}
+
+input{
+    padding: 8px 12px;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 0px 0px rgba(174, 0, 255, 0.434);
+    outline: none;
+    background-color: #f9f2ffcc;
+    font-size: 16px;
+}
+input:focus{
+    outline: none;
+    border-color: blueviolet;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.addTodo .btn{
+    margin-left:1%;
+    margin-top: 2%;
+    width: 10%;
+    height: 20%;
+}
+
+.addTodo input{
+    margin-left: 13px;
+}
+
+.addTodo h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 120px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.up{
+    position:absolute;
+    right:375px;
+    width: 52%;
+    color: white;
+    padding: 20px 15px;
+    margin-top: -50px;
+    margin-left: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(213, 168, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.write{
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.todos p{
+    margin-left: 1%;
+}
+
+.redd{
+    font-size: 10px;
+    color: red;
+}
+
+.but{
+    display: flex;
+    gap: 48%;
+    margin-top: 5%;
+}
+
+.btnn{
+    padding: 3px 5px;
+    background-color: blueviolet;
+    color: aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.314);
+    box-shadow: 0 4px 6px rgba(94, 94, 94, 0);
+    font-size: 13px;
+    transition: all 0.3s ease-in-out;
+    transition-duration: 500ms;
+    height: 35px;   
+}
+.btnn:hover{
+    background-color: rgb(172, 51, 243);
+    color: rgba(44, 43, 43, 0.849);
+    transition: all 0.3s ease-in-out;
+    transition-duration: 500ms;
+    transform: scale(1.01) translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0); 
+}
+
+.containerr{
+    width: 30%;
+    height: 70%;
+    margin: 120px auto;
+    padding: 50px 20px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(213, 168, 255);
+    box-shadow: 0 0 25px 8px rgba(128, 0, 128, 0.5); 
+    border-radius: 5px;
+    position: relative;
+    background-color: rgb(213, 168, 255);
+    flex-direction: column;
+    position: relative; 
+}
+
+.msg{
+  font-size: 20px;
+  font-weight: bold;
+  color: #6a0dad;
+  margin-left: 680px;
+  margin-bottom: 0px;
+  margin-top: 60px;
+  animation: slideIn 0.6s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 110%;
+        height: 80vh;
+        padding: 20px;
+    }
+    .todo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .addTodo .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .up {
+        right: 20px;
+        width: calc(100% - 40px);
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        width: 120vw;
+        height: auto;
+    }
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+    .logo {
+        font-size: 18px;    
+    }
+    .write {
+        font-size: 18px;
+    }
+    .btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+    }   
+    input {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+    }
+    .up{
+        right: -10px;
+        width: calc(100% - 40px);
+        margin-top: -19px;
+        padding: 10px 15px;
+        font-size: 14px;
+        height: 24%; 
+        width: 100%; 
+        flex-direction: column;
+        align-items: center;    
+        gap: 10px;
+        position: absolute;  
+    }
+
+    .addTodo h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    h2 {
+        font-size: 16px;
+        margin-top: 300px;
+        margin-left: 4px;
+        margin-bottom: 4px; 
+    }
+
+    /* .containerr{
+        width: 110%;
+        height: 80vh;
+        padding: 20px;
+    }
+
+    .but{
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+    } */
+}
+
+@media (min-width: 700px) {
+    nav{
+        width: 100%;
+    }
+    .container {
+        width: 51%;
+        height: 70vh;
+        padding: 50px 20px;
+        position: relative;
+    }
+
+    .todo {
+        flex-direction: row;
+        align-items: center;
+    }
+    .addTodo .btn {
+        width: 14%;
+        margin-top: 2%;
+    }
+    .up {
+        right:-10px;
+        width: 100%;
+        margin-top: -50px;
+        padding: 20px 15px;
+        font-size: 16px;
+        height: auto;
+        margin-left: 2px;
+        position:absolute;
+    }
+    .logo {
+        font-size: 16px;    
+    }
+    .write {
+        font-size: 20px;
+    }
+    .btn {
+        width: auto;
+        padding: 3px 5px;
+        font-size: 20px;
+    }   
+    input {
+        width: 80%;
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+    .addTodo h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 17px;
+        margin-top: 180px;
+        margin-left: 8px;
+        margin-bottom: 8px; 
+    }
+
+}
+
+
+    
